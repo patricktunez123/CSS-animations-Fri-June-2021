@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 5px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #353353;
+  font-size: 0.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.parent {
+  background: -webkit-gradient(linear, left top, left bottom, from(#302f4e), to(#ff4c60));
+  background: linear-gradient(#302f4e, #ff4c60);
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.child {
+  background: coral;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 200px;
+  padding: 2rem;
+}
+
+.parent .child {
+  -webkit-animation-name: moveBall;
+          animation-name: moveBall;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.parent:hover .child {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes moveBall {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    background: -webkit-gradient(linear, left top, left bottom, from(cyan), to(#302f4e));
+    background: linear-gradient(cyan, #302f4e);
+    color: black;
+  }
+  33% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#302f4e), to(cyan));
+    background: linear-gradient(#302f4e, cyan);
+    color: ghostwhite;
+  }
+  66% {
+    -webkit-transform: translateX(100%) translateY(100%);
+            transform: translateX(100%) translateY(100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(darkseagreen), to(darkviolet));
+    background: linear-gradient(darkseagreen, darkviolet);
+    color: gold;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(darkviolet), to(gold));
+    background: linear-gradient(darkviolet, gold);
+    color: floralwhite;
+  }
+}
+
+@keyframes moveBall {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    background: -webkit-gradient(linear, left top, left bottom, from(cyan), to(#302f4e));
+    background: linear-gradient(cyan, #302f4e);
+    color: black;
+  }
+  33% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#302f4e), to(cyan));
+    background: linear-gradient(#302f4e, cyan);
+    color: ghostwhite;
+  }
+  66% {
+    -webkit-transform: translateX(100%) translateY(100%);
+            transform: translateX(100%) translateY(100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(darkseagreen), to(darkviolet));
+    background: linear-gradient(darkseagreen, darkviolet);
+    color: gold;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(darkviolet), to(gold));
+    background: linear-gradient(darkviolet, gold);
+    color: floralwhite;
+  }
+}
+/*# sourceMappingURL=style.css.map */
