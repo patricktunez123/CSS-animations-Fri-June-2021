@@ -88,3 +88,23 @@ body {
     color: floralwhite;
   }
 }
+
+@media screen and (max-width: 480px) {
+  body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 4px;
+  }
+  .parent {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+  .child {
+    width: 100px;
+    height: 100px;
+  }
+}
